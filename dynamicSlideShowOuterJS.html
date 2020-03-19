@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<head>
+	<title>dynamicSlideShow by neisii</title>
+	
+<style>
+
+#albumList {
+	width: auto;
+	height: 244px;
+	type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#albumList img {
+	width: 174px;
+	height: 244px;
+	border: 1px solid red;
+}
+
+.displayOn {
+	display: block;
+}
+
+.displayOff {
+	display: none;
+}
+
+</style>
+
+
+<script type="text/javascript">
+	var objArr = new Array();
+	objArr.push("201608270123.png");
+	objArr.push("201608270557.png");
+	objArr.push("201608271723.png");
+	objArr.push("201608275433.png");
+	objArr.push("201608277851.png");
+	objArr.push("201608278513.png");
+
+	objArr.push("201608289103.png");
+	objArr.push("201608283492.png");
+	objArr.push("201608282921.png");
+	objArr.push("201608280193.png");
+	objArr.push("201608281039.png");
+	objArr.push("201608289910.png");
+</script>
+</head>
+
+<body onload="javascript:albumListInitialization(3, 1000*3);">
+현재 페이지: <span id="recentPage"></span>
+<input type="button" id="btn_setOnOff" value="stop" onclick="javascript:getSildeShowStatus();" alt="start" />
+<input type="button" value="prev" onclick="javascript:slideImage(-1);" />
+<input type="button" value="next" onclick="javascript:slideImage(1);" />
+<div id="div_albumList">
+	<ul id="albumList">
+	<!-- 이미지 목록이 추가될 곳 -->
+	</ul>
+</div>
+
+<script type="text/javascript" src="./js/dynamicSlideShow.js"></script>
+</body>
+</html>
